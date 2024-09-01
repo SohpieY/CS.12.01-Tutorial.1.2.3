@@ -23,10 +23,11 @@ public class Scramble{
        // ArrayList<String> result = new ArrayList<>();
         for(int i = 0; i < wordList.size(); i++){
             String scrambleWord = scrambleWord(wordList.get(i));
-            if(!(scrambleWord.equals(wordList.get(i)))){
+            if(scrambleWord.equals(wordList.get(i))){
                 wordList.remove(scrambleWord);
+                i--;
             } else{
-                wordList.add(scrambleWord);
+                wordList.set(i,scrambleWord);
             }
 
         }
